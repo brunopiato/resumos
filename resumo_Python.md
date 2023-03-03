@@ -1,0 +1,126 @@
+# Resumo de Python
+Bruno Piato - 02 de março de 2023
+
+
+## 1. Funções e estruturas nativas
+
+### 1.1. Expressões *lambda*
+As expressões lambda (funções anônimas) são usadas para que possamos nos beneficiar da estrutura de funções sem ter que definir e, posteriormente, chamar uma função. Normalmente são usadas como input de outras funções. A estrutura de uma função lambda é:
+
+```python
+lambda saida: operacao_entrada
+
+func_lambda = lambda x: 3*x + 1 
+func_lambda(x) #Esta sintaxe é sinônima à seguinte:
+def func(x):
+    return 3*x+1
+func(x)
+```
+
+A forma acima não é a maneira mais digna de usar as funções lambda. A forma abaixo é muito mais comum e correta, uma vez que se fôssemos definir uma função, não precisaríamos da expressão lambda.
+
+```python
+# Neste caso a expressão lambda está sendo utilziada para transformar a variável 
+# competition_open_since_month usando o método .apply() do objeto DataFram chamdo df1
+
+df1['competition_open_since_month'] = (df1.apply( lambda x: x['date'].month 
+                                        if math.isnan( x['competition_open_since_month'] ) 
+                                        else x['competition_open_since_month'], axis=1 ))
+```
+
+
+
+### 1.2. Função *map()*
+
+A função *map()* aplica uma determinada função sobre um objeto iterável, como listas, tuplas e conjuntos, por exemplo. Ela recebe, portanto, dois argumentos, a função a ser aplicada e o iterável. A ideia central desta função é poder substituir os laços *for* em que aplicaríamos uma função aos elementos de um objeto iterável e obteríamos como resultado um objeto iterável modificado. 
+
+```python
+map(function, iteravel)
+
+lista = [1, 2, 3]
+map(print, lista)
+map(lambda x: 3*x+1, lista)
+```
+
+<br>
+
+## 2. Biblioteca: Pandas
+O Pandas é uma biblioteca utilizada principalmente para carregar, transformar e manipular dados em forma de tabelas (dataframes). Alguns dos métodos dos objetos de classe DataFrame foram descritos anteriormente e serão retomados aqui.
+
+### 2.1. Método *apply()*
+O método *apply()* funciona de forma semelhante à função *map()*, sendo um método dos objetos de classe DataFrame pertencentes à biblioteca Pandas que itera uma função especificada sobre as linhas ou colunas de um dataframe. Desta forma devemos explicitar qual função iremos iterar sobre o dataframe e a orientação da iteração (horizontal, ou seja, nas linhas, ou verrtical, nas colunas) com o argumento *axis=* (0 para colunas e 1 para linhas).
+
+```python
+import pandas as pd
+dataframe.apply(mean, axis=0)
+```
+
+
+### 2.2. Método *agg()*
+
+O método *agg()* vem da palavra aggregate e ele permite que façamos o mesmo que o método apply, mas utilizando múltiplas funções ao mesmo tempo, devolvendo um dataframe com os resultados da aplicação de cada função.
+
+```python
+import pandas as pd
+
+(num_attributes.agg(["mean","median","std","min","max","skew","kurtosis"]).T
+        .reset_index()
+        .rename(columns={'index': 'attributes'}))
+```
+
+
+### 2.3. Método *groupby()*
+O método *groupby()* pertecten ao Pandas permite que agrupemos um dataframe de acordo com as categorias de uma variável ou condição e aplicar uma operação de agrupamento (contagem, soma, média, etc). 
+```python
+import pandas as pd
+
+df1[['var1', 'var2', 'var3']].groupby('var1').operacao() #Vamos agrupar pela variável var1 
+#                                                        e aplicar a operacao às outras duas
+df1[['var1', 'var2', 'var3']].groupby(['var1', 'var2']).operacao() #Vamos agrupar pela variável var1 
+#                                                        e em seguida pela var2 e aplicar a operação 
+#                                                        à var3
+df1[['var1', 'var2', 'var3']].groupby(['var1', 'var2']).agg(['oper1', 'oper2']) #Vamos agrupar pela 
+#                                                       variável var1 e em seguida pela var2 e aplicar a 
+#                                                       operação à var3
+```
+
+
+<br>
+
+## 3. Biblioteca: MatPlotLib
+É uma biblioteca dedicada à plotagem de gráficos.
+
+```python
+from matplotlib import <módulo>
+```
+
+
+<br>
+
+## 4. Biblioteca: Seaborn
+É uma biblioteca dedicada à plotagem de gráficos.
+
+```python
+import seaborn as sns
+```
+
+
+<br>
+
+## 5. Biblioteca: plotly
+É uma biblioteca dedicada à plotagem de gráficos.
+
+```python
+import plotly.express as px
+```
+
+
+<br>
+
+## 6. Biblioteca: Streamlit 
+O pacote Streamlit é um pacote para a criação de aplicações web de análise e visualização de dados. É ótima para o desenvolvimento de dashboars e painéis de dados, tendo diversos widgets, botões, afinidade com pacotes de plotagem gráfica (i.e. plotly) e outras funcionalidades.
+
+
+```python
+import streamlit as st
+```

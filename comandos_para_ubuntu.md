@@ -83,9 +83,7 @@ rm -rf ~/.config/jupyterlab-desktop
 
 ### 3.1. Instalando o gerenciador de versões do Python
 ```bash
-sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev 
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils 
-tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
 
 # OU
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python2-dev python3-dev aria2

@@ -87,9 +87,25 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils 
 tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
 
-curl https://pyenv.run | bash 
+# OU
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python2-dev python3-dev aria2
 ```
-Talvez seja necessário seguir as instruções que a própria instalção do *pyenv* dê em relação a adicionar alguns comandos ao *~/.bashrc*
+
+```bash
+curl https://pyenv.run | bash 
+
+# OU
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+```
+Talvez seja necessário seguir as instruções que a própria instalção do *pyenv* dê em relação a adicionar alguns comandos ao *~/.bashrc* :
+```bash
+export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"
+
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
 
 ### 3.2. Instalando o gerenciador de versões do Python
 ```bash

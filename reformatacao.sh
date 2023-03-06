@@ -31,6 +31,7 @@ sudo snap install inkscape #Inkscape
 sudo snap install notion-snap #Notion
 sudo snap install  #Dropbox
 sudo snap install notion-snap #Notion
+sudo snap install #Diodon
 
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre
@@ -76,3 +77,10 @@ echo deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bi
 sudo apt update
 sudo apt install r-base
 R --version
+
+## Instalando o RStudio
+wget -c https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64-debian.tar.gz
+sudo apt-get install gdebi-core
+sudo gdebi rstudio-2022.12.0-353-amd64.deb
+#sudo dpkg -i rstudio-2022.12.0-353-amd64.deb
+#sudo apt-get install -f

@@ -13,7 +13,7 @@
     - [2.5. Desinstalando coisas](#25-desinstalando-coisas)
   - [3. Python e DS](#3-python-e-ds)
     - [3.1. Instalando o gerenciador de versões do Python](#31-instalando-o-gerenciador-de-versões-do-python)
-    - [3.2. Instalando o gerenciador de versões do Python](#32-instalando-o-gerenciador-de-versões-do-python)
+    - [3.2. Instalando o gerenciador de pacotes do Python](#32-instalando-o-gerenciador-de-pacotes-do-python)
     - [3.3. Criando e ativando um Ambiente Virtual para Python](#33-criando-e-ativando-um-ambiente-virtual-para-python)
     - [3.4. Instalando o Git](#34-instalando-o-git)
   - [R e RStudio](#r-e-rstudio)
@@ -105,7 +105,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-### 3.2. Instalando o gerenciador de versões do Python
+### 3.2. Instalando o gerenciador de pacotes do Python
 ```bash
 sudo apt install python3-pip
 pip install cython #Uma biblioteca que garante algumas funcionalidades

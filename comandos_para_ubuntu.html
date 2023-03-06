@@ -384,7 +384,7 @@ code {
 <li><a href="#3-python-e-ds">3. Python e DS</a>
 <ul>
 <li><a href="#31-instalando-o-gerenciador-de-vers%C3%B5es-do-python">3.1. Instalando o gerenciador de versões do Python</a></li>
-<li><a href="#32-instalando-o-gerenciador-de-vers%C3%B5es-do-python">3.2. Instalando o gerenciador de versões do Python</a></li>
+<li><a href="#32-instalando-o-gerenciador-de-pacotes-do-python">3.2. Instalando o gerenciador de pacotes do Python</a></li>
 <li><a href="#33-criando-e-ativando-um-ambiente-virtual-para-python">3.3. Criando e ativando um Ambiente Virtual para Python</a></li>
 <li><a href="#34-instalando-o-git">3.4. Instalando o Git</a></li>
 </ul>
@@ -450,14 +450,25 @@ rm -rf ~/.config/jupyterlab-desktop
 <hr>
 <h2 id="3-python-e-ds">3. Python e DS</h2>
 <h3 id="31-instalando-o-gerenciador-de-vers%C3%B5es-do-python">3.1. Instalando o gerenciador de versões do Python</h3>
-<pre class="hljs"><code><div>sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev 
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils 
-tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
+<pre class="hljs"><code><div>sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
 
-curl https://pyenv.run | bash 
+<span class="hljs-comment"># OU</span>
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python2-dev python3-dev aria2
 </div></code></pre>
-<p>Talvez seja necessário seguir as instruções que a própria instalção do <em>pyenv</em> dê em relação a adicionar alguns comandos ao <em>~/.bashrc</em></p>
-<h3 id="32-instalando-o-gerenciador-de-vers%C3%B5es-do-python">3.2. Instalando o gerenciador de versões do Python</h3>
+<pre class="hljs"><code><div>curl https://pyenv.run | bash 
+
+<span class="hljs-comment"># OU</span>
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+</div></code></pre>
+<p>Talvez seja necessário seguir as instruções que a própria instalção do <em>pyenv</em> dê em relação a adicionar alguns comandos ao <em>~/.bashrc</em> :</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">export</span> PYTHON_BUILD_ARIA2_OPTS=<span class="hljs-string">"-x 10 -k 1M"</span>
+
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-string">"~/.pyenv/bin:<span class="hljs-variable">$PATH</span>"</span>
+<span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init --path)</span>"</span>
+<span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv init -)</span>"</span>
+<span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(pyenv virtualenv-init -)</span>"</span>
+</div></code></pre>
+<h3 id="32-instalando-o-gerenciador-de-pacotes-do-python">3.2. Instalando o gerenciador de pacotes do Python</h3>
 <pre class="hljs"><code><div>sudo apt install python3-pip
 pip install cython <span class="hljs-comment">#Uma biblioteca que garante algumas funcionalidades</span>
 </div></code></pre>

@@ -32,6 +32,7 @@ sudo snap install notion-snap #Notion
 sudo snap install  #Dropbox
 sudo snap install notion-snap #Notion
 sudo snap install #Diodon
+sudo snap install pycharm-community --classic #PyCharm Community
 
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre

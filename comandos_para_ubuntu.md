@@ -43,6 +43,7 @@ rm -rf diretorio #Deleta um diretório e tudo que estiver dentro dele
 sudo service gdm restart #Reinicia o console sem reiniciar todo o computador
 mv nomeantigo.file nomenovo.file #Renomeando um arquivo
 mv ~/DiretorioOrigem/arquivoMovido.file ~/DiretorioDestino #O comando mv é usado para mover arquivos. Por isso podemos usá-lo para renomear, movendo um arquivo da pasta para ela mesma com outro nome. Podemos usar o parâmetro "." para o diretório de destino para que o arquivo seja transferido para a pasta atual.
+touch afile.txt #Cria um arquivo vazio
 ```
 
 ### 2.2. Mudando o nome do Prompt no terminal

@@ -37,6 +37,7 @@ mkdir novodir #Cria um novo diretório dentro do local atual
 cp ~/diretorio/arquivo #Copia o arquivo especificado para dentro do diretório atual
 sudo #Dá permissão para realizar alterações, como instalação de programas
 sudo apt install aplicativo #Instala um aplicativo
+sudo dpkg -i arquivo.deb #Instala a partir de um arquivo .deb
 shutdown +0 #Desliga o computador após 0 segundos
 rm diretorio/arquivo #Deleta um arquivo no diretório
 rm -rf diretorio #Deleta um diretório e tudo que estiver dentro dele

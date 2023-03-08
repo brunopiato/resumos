@@ -34,6 +34,12 @@ sudo snap install notion-snap #Notion
 sudo snap install #Diodon
 sudo snap install pycharm-community --classic #PyCharm Community
 
+# Instalando um colorizador de folders para o Nautilus
+sudo add-apt-repository ppa:costales/yaru-colors-folder-color #Adicionar o repositório PPA
+sudo apt update #Atualizar o sistema
+sudo apt install yaru-colors-folder-color folder-color  -y #Instalar o colorizador
+nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
+
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre
 

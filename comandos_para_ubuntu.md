@@ -1,33 +1,34 @@
 # Comandos para Ubuntu 22.04
 
-## 1. Sumário
+## Sumário
 <!-- TOC -->
 
 - [Comandos para Ubuntu 22.04](#comandos-para-ubuntu-2204)
-  - [1. Sumário](#1-sumário)
-  - [2. O próprio sistema](#2-o-próprio-sistema)
-    - [2.1. Comandos básicos úteis](#21-comandos-básicos-úteis)
-    - [2.2. Mudando o nome do Prompt no terminal](#22-mudando-o-nome-do-prompt-no-terminal)
-    - [2.3. Atualizações e instalações](#23-atualizações-e-instalações)
-    - [2.4. Instalando utilidades para o Ubuntu](#24-instalando-utilidades-para-o-ubuntu)
-    - [2.5. Desinstalando coisas](#25-desinstalando-coisas)
-  - [3. Python e DS](#3-python-e-ds)
-    - [3.1. Instalando o gerenciador de versões do Python](#31-instalando-o-gerenciador-de-versões-do-python)
-    - [3.2. Instalando o gerenciador de pacotes do Python](#32-instalando-o-gerenciador-de-pacotes-do-python)
-    - [3.3. Criando e ativando um Ambiente Virtual para Python](#33-criando-e-ativando-um-ambiente-virtual-para-python)
-    - [3.4. Instalando o Git](#34-instalando-o-git)
+  - [Sumário](#sumário)
+  - [O próprio sistema](#o-próprio-sistema)
+    - [Comandos básicos úteis](#comandos-básicos-úteis)
+    - [Mudando o nome do Prompt no terminal](#mudando-o-nome-do-prompt-no-terminal)
+    - [Atualizações e instalações](#atualizações-e-instalações)
+    - [Instalando utilidades para o Ubuntu](#instalando-utilidades-para-o-ubuntu)
+    - [Desinstalando coisas](#desinstalando-coisas)
+    - [Instalando um colorizador de folders](#instalando-um-colorizador-de-folders)
+  - [Python e DS](#python-e-ds)
+    - [Instalando o gerenciador de versões do Python](#instalando-o-gerenciador-de-versões-do-python)
+    - [Instalando o gerenciador de pacotes do Python](#instalando-o-gerenciador-de-pacotes-do-python)
+    - [Criando e ativando um Ambiente Virtual para Python](#criando-e-ativando-um-ambiente-virtual-para-python)
+    - [Instalando o Git](#instalando-o-git)
   - [R e RStudio](#r-e-rstudio)
     - [Instalando o R](#instalando-o-r)
-  - [4. Calibre](#4-calibre)
-    - [4.1. Dark mode](#41-dark-mode)
-  - [5. Extensões](#5-extensões)
-    - [5.1. Unite](#51-unite)
+  - [Calibre](#calibre)
+    - [Dark mode](#dark-mode)
+  - [Extensões](#extensões)
+    - [Unite](#unite)
 
 <!-- /TOC -->
 
-## 2. O próprio sistema
+## O próprio sistema
 
-### 2.1. Comandos básicos úteis
+### Comandos básicos úteis
 ```bash
 pwd #Vê o caminho do diretório em que estamos atualmente 
 ls #Lista o que há dentro do diretório atual
@@ -47,7 +48,7 @@ mv ~/DiretorioOrigem/arquivoMovido.file ~/DiretorioDestino #O comando mv é usad
 touch afile.txt #Cria um arquivo vazio
 ```
 
-### 2.2. Mudando o nome do Prompt no terminal
+### Mudando o nome do Prompt no terminal
 ```bash
 sudo gedit ~/.bashrc 
 
@@ -56,20 +57,20 @@ sudo gedit ~/.bashrc
 
 
 
-### 2.3. Atualizações e instalações
+### Atualizações e instalações
 ```bash
 # Para atualizar o sistema
 sudo apt update && sudo apt upgrade
 
 ```
 
-### 2.4. Instalando utilidades para o Ubuntu
+### Instalando utilidades para o Ubuntu
 ```bash
 sudo apt install tree #Este programa permite que vejamos com o comando "tree" a
                     #listagem de arquivos dentro de uma pasta em forma de árvore
 ```
 
-### 2.5. Desinstalando coisas
+### Desinstalando coisas
 Neste caso as desinstalação é do Jupyter Lab Desktop
 ```bash
 sudo apt-get purge jupyterlab-desktop # remove application
@@ -79,11 +80,20 @@ rm /usr/bin/jlab # remove command symlink
 rm -rf ~/.config/jupyterlab-desktop 
 ```
 
+
+### Instalando um colorizador de folders
+
+```bash
+sudo add-apt-repository ppa:costales/yaru-colors-folder-color #Adicionar o repositório PPA
+sudo apt update #Atualizar o sistema
+sudo apt install yaru-colors-folder-color folder-color  -y #Instalar o colorizador
+nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
+```
 ---
 
-## 3. Python e DS
+## Python e DS
 
-### 3.1. Instalando o gerenciador de versões do Python
+### Instalando o gerenciador de versões do Python
 ```bash
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
 
@@ -107,25 +117,26 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-### 3.2. Instalando o gerenciador de pacotes do Python
+### Instalando o gerenciador de pacotes do Python
 ```bash
 sudo apt install python3-pip
 pip install cython #Uma biblioteca que garante algumas funcionalidades
 ```
 
-### 3.3. Criando e ativando um Ambiente Virtual para Python
+### Criando e ativando um Ambiente Virtual para Python
 ```bash
 pyenv virtualenv <versao_python> <nome_ambiente>
 pyenv activate <nome_ambiente>
 ```
 
-### 3.4. Instalando o Git
+### Instalando o Git
 ```bash
 sudo apt update
 sudo apt install git
 ```
 
 ---
+
 ## R e RStudio
 
 ### Instalando o R
@@ -160,9 +171,9 @@ sudo R
 
 ---
 
-## 4. Calibre
+## Calibre
 
-### 4.1. Dark mode
+### Dark mode
 ```bash
 # create a file under etc/profile.d
 sudo nano /etc/profile.d/calibre.sh   
@@ -177,14 +188,14 @@ sudo service gdm restart
 
 --- 
 
-## 5. Extensões
+## Extensões
 Extensões:
 <https://extensions.gnome.org/>
 
 Para instalar:
 <https://linuxhint.com/installing_gnome_extensions_ubuntu/>
 
-### 5.1. Unite
+### Unite
 A extensão unite permite arrumar visualmente o ambiente Ubuntu, ajustando a aparência da interface.
 Link para a extensão Unite:
 <https://extensions.gnome.org/extension/1287/unite/>

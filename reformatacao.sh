@@ -9,6 +9,8 @@ COMMENT
 # Atualizando o sistema
 sudo apt update && sudo apt upgrade
 sudo apt install curl
+sudo apt install snapd
+sudo snap install snap-store
 
 # Instalando o Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -16,7 +18,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # Instalando as extensões do Linux
 sudo apt install gnome-tweaks
-sudo apt install gnome-shell-extension
+sudo apt install gnome-shell-extensions
 sudo apt install chrome-gnome-shell
 
 # Instalando o VSCode Insiders

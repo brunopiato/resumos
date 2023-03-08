@@ -4,9 +4,14 @@ Este repositório servirá como uma forma de eu salvar meu progresso nos estudos
 
 Além disso preparei um arquivo chamado reformatacao.sh para instalar e configurar automaticamente o ambiente do Ubuntu caso seja necessária uma reformatação ou algo do gênero e um guia de comandos para terminal no OS Ubuntu conforme avanço meus estudos também nesse contexto.
 
-[Git para DS] (https://github.com/brunopiato/resumos/blob/main/resumo_Git_DataScience.md)
-[SQL para DS] (https://github.com/brunopiato/resumos/blob/main/resumo_SQL_DataScience.md)
-[Fundamentos de Python] (https://github.com/brunopiato/resumos/blob/main/resumo_Python.md)
+[Git para DS](https://github.com/brunopiato/resumos/blob/main/resumo_Git_DataScience.md)
+
+[SQL para DS](https://github.com/brunopiato/resumos/blob/main/resumo_SQL_DataScience.md)
+
+[Fundamentos de Python](https://github.com/brunopiato/resumos/blob/main/resumo_Python.md)
+
 [Comandos básicos de Ubuntu](https://github.com/brunopiato/resumos/blob/main/comandos_para_ubuntu.md)
-[Arquivo de reformatação] (https://github.com/brunopiato/resumos/blob/main/reformatacao.sh)
+
+[Arquivo de reformatação](https://github.com/brunopiato/resumos/blob/main/reformatacao.sh)
+
 [Anotações para DS](https://github.com/brunopiato/resumos/blob/main/meus_resumos_DataScience.md)

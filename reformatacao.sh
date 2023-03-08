@@ -43,7 +43,7 @@ nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre
 
-sudo nano /etc/profile.d/calibre.sh
+sudo touch /etc/profile.d/calibre.sh
 echo "export CALIBRE_USE_DARK_PALETTE=1" >> /etc/profile.d/calibre.sh
 
 # Instalando o Dropbox

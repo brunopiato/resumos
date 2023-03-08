@@ -16,7 +16,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # Instalando as extensões do Linux
 sudo apt install gnome-tweaks
-sudo apt isntall gnome-shell-extension
+sudo apt install gnome-shell-extension
 sudo apt install chrome-gnome-shell
 
 # Instalando o VSCode Insiders

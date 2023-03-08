@@ -88,8 +88,5 @@ sudo apt install r-base
 R --version
 
 ## Instalando o RStudio
-wget -c https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64-debian.tar.gz
-sudo apt-get install gdebi-core
-sudo gdebi rstudio-2022.12.0-353-amd64.deb
-#sudo dpkg -i rstudio-2022.12.0-353-amd64.deb
-#sudo apt-get install -f
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64.deb
+sudo apt install -f ./rstudio-2022.12.0-353-amd64.deb

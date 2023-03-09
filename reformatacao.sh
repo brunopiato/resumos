@@ -90,3 +90,8 @@ R --version
 ## Instalando o RStudio
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64.deb
 sudo apt install -f ./rstudio-2022.12.0-353-amd64.deb
+
+
+#-----------------------------------------------------------------------------------------
+# Instalando Julia
+sudo apt install julia

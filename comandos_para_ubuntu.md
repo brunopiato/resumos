@@ -5,30 +5,32 @@
 
 - [Comandos para Ubuntu 22.04](#comandos-para-ubuntu-2204)
   - [Sumário](#sumário)
-  - [O próprio sistema](#o-próprio-sistema)
-    - [Comandos básicos úteis](#comandos-básicos-úteis)
-    - [Mudando o nome do Prompt no terminal](#mudando-o-nome-do-prompt-no-terminal)
-    - [Atualizações e instalações](#atualizações-e-instalações)
-    - [Instalando utilidades para o Ubuntu](#instalando-utilidades-para-o-ubuntu)
-    - [Desinstalando coisas](#desinstalando-coisas)
-    - [Instalando um colorizador de folders](#instalando-um-colorizador-de-folders)
-  - [Python e DS](#python-e-ds)
-    - [Instalando o gerenciador de versões do Python](#instalando-o-gerenciador-de-versões-do-python)
-    - [Instalando o gerenciador de pacotes do Python](#instalando-o-gerenciador-de-pacotes-do-python)
-    - [Criando e ativando um Ambiente Virtual para Python](#criando-e-ativando-um-ambiente-virtual-para-python)
-    - [Instalando o Git](#instalando-o-git)
-  - [R e RStudio](#r-e-rstudio)
-    - [Instalando o R](#instalando-o-r)
-  - [Calibre](#calibre)
-    - [Dark mode](#dark-mode)
-  - [Extensões](#extensões)
-    - [Unite](#unite)
+  - [1. O próprio sistema](#1-o-próprio-sistema)
+    - [1.1. Comandos básicos úteis](#11-comandos-básicos-úteis)
+    - [1.2. Mudando o nome do Prompt no terminal](#12-mudando-o-nome-do-prompt-no-terminal)
+    - [1.3. Atualizações e instalações](#13-atualizações-e-instalações)
+    - [1.4. Instalando utilidades para o Ubuntu](#14-instalando-utilidades-para-o-ubuntu)
+    - [1.5. Desinstalando coisas](#15-desinstalando-coisas)
+    - [1.6. Instalando um colorizador de folders](#16-instalando-um-colorizador-de-folders)
+  - [2. Python e DS](#2-python-e-ds)
+    - [2.1. Instalando o gerenciador de versões do Python](#21-instalando-o-gerenciador-de-versões-do-python)
+    - [2.2. Instalando o gerenciador de pacotes do Python](#22-instalando-o-gerenciador-de-pacotes-do-python)
+    - [2.3. Criando e ativando um Ambiente Virtual para Python](#23-criando-e-ativando-um-ambiente-virtual-para-python)
+    - [2.4. Instalando o Git](#24-instalando-o-git)
+  - [3. R e RStudio](#3-r-e-rstudio)
+    - [3.1. Instalando o R](#31-instalando-o-r)
+  - [4. Calibre](#4-calibre)
+    - [4.1. Dark mode](#41-dark-mode)
+  - [5. Extensões](#5-extensões)
+    - [5.1. Unite](#51-unite)
+    - [5.2. Aylur's Widgets](#52-aylurs-widgets)
+    - [5.3. OpenWeather](#53-openweather)
 
 <!-- /TOC -->
 
-## O próprio sistema
+## 1. O próprio sistema
 
-### Comandos básicos úteis
+### 1.1. Comandos básicos úteis
 ```bash
 pwd #Vê o caminho do diretório em que estamos atualmente 
 ls #Lista o que há dentro do diretório atual
@@ -48,7 +50,7 @@ mv ~/DiretorioOrigem/arquivoMovido.file ~/DiretorioDestino #O comando mv é usad
 touch afile.txt #Cria um arquivo vazio
 ```
 
-### Mudando o nome do Prompt no terminal
+### 1.2. Mudando o nome do Prompt no terminal
 ```bash
 sudo gedit ~/.bashrc 
 
@@ -57,20 +59,20 @@ sudo gedit ~/.bashrc
 
 
 
-### Atualizações e instalações
+### 1.3. Atualizações e instalações
 ```bash
 # Para atualizar o sistema
 sudo apt update && sudo apt upgrade
 
 ```
 
-### Instalando utilidades para o Ubuntu
+### 1.4. Instalando utilidades para o Ubuntu
 ```bash
 sudo apt install tree #Este programa permite que vejamos com o comando "tree" a
                     #listagem de arquivos dentro de uma pasta em forma de árvore
 ```
 
-### Desinstalando coisas
+### 1.5. Desinstalando coisas
 Neste caso as desinstalação é do Jupyter Lab Desktop
 ```bash
 sudo apt-get purge jupyterlab-desktop # remove application
@@ -81,7 +83,7 @@ rm -rf ~/.config/jupyterlab-desktop
 ```
 
 
-### Instalando um colorizador de folders
+### 1.6. Instalando um colorizador de folders
 
 ```bash
 sudo add-apt-repository ppa:costales/yaru-colors-folder-color #Adicionar o repositório PPA
@@ -91,9 +93,9 @@ nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
 ```
 ---
 
-## Python e DS
+## 2. Python e DS
 
-### Instalando o gerenciador de versões do Python
+### 2.1. Instalando o gerenciador de versões do Python
 ```bash
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev git python3-dev
 
@@ -117,19 +119,19 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-### Instalando o gerenciador de pacotes do Python
+### 2.2. Instalando o gerenciador de pacotes do Python
 ```bash
 sudo apt install python3-pip
 pip install cython #Uma biblioteca que garante algumas funcionalidades
 ```
 
-### Criando e ativando um Ambiente Virtual para Python
+### 2.3. Criando e ativando um Ambiente Virtual para Python
 ```bash
 pyenv virtualenv <versao_python> <nome_ambiente>
 pyenv activate <nome_ambiente>
 ```
 
-### Instalando o Git
+### 2.4. Instalando o Git
 ```bash
 sudo apt update
 sudo apt install git
@@ -137,9 +139,9 @@ sudo apt install git
 
 ---
 
-## R e RStudio
+## 3. R e RStudio
 
-### Instalando o R
+### 3.1. Instalando o R
 ```bash
 # Antes de iniciar a instalação devemos atualizar o sistema
 sudo apt update
@@ -166,14 +168,11 @@ sudo R
 ```
 
 
-
-
-
 ---
 
-## Calibre
+## 4. Calibre
 
-### Dark mode
+### 4.1. Dark mode
 ```bash
 # create a file under etc/profile.d
 sudo nano /etc/profile.d/calibre.sh   
@@ -188,14 +187,22 @@ sudo service gdm restart
 
 --- 
 
-## Extensões
+## 5. Extensões
 Extensões:
 <https://extensions.gnome.org/>
 
 Para instalar:
 <https://linuxhint.com/installing_gnome_extensions_ubuntu/>
 
-### Unite
-A extensão unite permite arrumar visualmente o ambiente Ubuntu, ajustando a aparência da interface.
+### 5.1. Unite
+A extensão Unite permite arrumar visualmente o ambiente Ubuntu, ajustando a aparência da interface.
 Link para a extensão Unite:
 <https://extensions.gnome.org/extension/1287/unite/>
+
+### 5.2. Aylur's Widgets
+Esta extensão adiciona uma série de wigdets à área de trabalho e à barra de tarefas.
+<https://extensions.gnome.org/extension/5338/aylurs-widgets/>
+
+### 5.3. OpenWeather
+Extensão de previsão meteorológica
+<https://extensions.gnome.org/extension/750/openweather/>

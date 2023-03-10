@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Arquivo de configuração do sistema após formatação
 : << 'COMMENT'
 Este arquivo serve como 
@@ -21,8 +23,8 @@ sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extensions
 sudo apt install chrome-gnome-shell
 
-# Instalando o VSCode Insiders
-sudo snap install code-insiders --classic
+# Instalando o VSCode
+sudo snap install code
 
 # Instalando aplicativos do Snap
 sudo snap install drawio #Drawio
@@ -31,10 +33,13 @@ sudo snap install dbeaver-ce #DBeaver
 sudo snap install discord #Discord
 sudo snap install inkscape #Inkscape
 sudo snap install notion-snap #Notion
-sudo snap install  #Dropbox
 sudo snap install notion-snap #Notion
-sudo snap install #Diodon
+sudo snap install diodon #Diodon
 sudo snap install pycharm-community --classic #PyCharm Community
+
+# Instalando Dropbox
+curl https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+sudo apt install ./dropbox_2020.03.04_amd64.deb
 
 # Instalando um colorizador de folders para o Nautilus
 sudo add-apt-repository ppa:costales/yaru-colors-folder-color #Adicionar o repositório PPA
@@ -45,13 +50,7 @@ nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre
 
-sudo touch /etc/profile.d/calibre.sh
 sudo echo "export CALIBRE_USE_DARK_PALETTE=1" >> /etc/profile.d/calibre.sh
-
-# Instalando o Dropbox
-# https://help.dropbox.com/pt-br/installs/linux-commands
-wget https://linux.dropbox.com/packages/nautilus-dropbox-2022.12.05.tar.bz2
-sudo apt install .//nautilus-dropbox-2022.12.05.tar.bz2
 
 #-----------------------------------------------------------------------------------------
 # Instalando Git

@@ -61,6 +61,9 @@ sudo apt install git
 
 #-----------------------------------------------------------------------------------------
 # Instalando o pyenv e o Python
+# Instalando Python 3.11 
+sudo apt install python3.11
+
 ## Instalando o pyenv
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python2-dev python3-dev aria2
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
@@ -75,6 +78,9 @@ eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 ## Instalando o gerenciador de pacotes do Python
 sudo apt install python3-pip
 pip install cython
+
+# Instalando Jupyter Notebook
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 
 
 #-----------------------------------------------------------------------------------------

@@ -17,6 +17,7 @@ sudo snap install snap-store
 # Instalando o Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo rm ./google-chrome-stable_current_amd64.deb
 
 # Instalando as extensões do Linux
 sudo apt install gnome-tweaks
@@ -33,13 +34,13 @@ sudo snap install dbeaver-ce #DBeaver
 sudo snap install discord #Discord
 sudo snap install inkscape #Inkscape
 sudo snap install notion-snap #Notion
-sudo snap install notion-snap #Notion
-sudo snap install diodon #Diodon
 sudo snap install pycharm-community --classic #PyCharm Community
+sudo apt install diodon #Diodon
 
 # Instalando Dropbox
-curl https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+curl https://linux.dropbox.com/packages/ubuntu/dropbox_2020.03.04_amd64.deb --output dropbox_2020.03.04_amd64.deb
 sudo apt install ./dropbox_2020.03.04_amd64.deb
+sudo rm ./dropbox_2020.03.04_amd64.deb
 
 # Instalando um colorizador de folders para o Nautilus
 sudo add-apt-repository ppa:costales/yaru-colors-folder-color #Adicionar o repositório PPA
@@ -49,7 +50,7 @@ nautilus -q  #Reiniciar o Nautilus para que as modificações tenham efeito
 
 # Instalando e configurando o Calibre
 sudo apt-get install -y calibre
-
+sudo touch /etc/profile.d/calibre.sh
 sudo echo "export CALIBRE_USE_DARK_PALETTE=1" >> /etc/profile.d/calibre.sh
 
 #-----------------------------------------------------------------------------------------
@@ -89,6 +90,7 @@ R --version
 ## Instalando o RStudio
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64.deb
 sudo apt install -f ./rstudio-2022.12.0-353-amd64.deb
+sudo rm ./rstudio-2022.12.0-353-amd64.deb
 
 
 #-----------------------------------------------------------------------------------------

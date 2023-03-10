@@ -85,7 +85,7 @@ python3 -m pip install ipykernel
 python3 -m ipykernel install --user
 
 ## Instalando as extensões do Jupyter Notebook
-sudo pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install --user
+pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 
 #-----------------------------------------------------------------------------------------

@@ -48,6 +48,7 @@ sudo service gdm restart #Reinicia o console sem reiniciar todo o computador
 mv nomeantigo.file nomenovo.file #Renomeando um arquivo
 mv ~/DiretorioOrigem/arquivoMovido.file ~/DiretorioDestino #O comando mv é usado para mover arquivos. Por isso podemos usá-lo para renomear, movendo um arquivo da pasta para ela mesma com outro nome. Podemos usar o parâmetro "." para o diretório de destino para que o arquivo seja transferido para a pasta atual.
 touch afile.txt #Cria um arquivo vazio
+gsettings set org.gnome.SessionManager logout-prompt false #Retira o tempo de espera do botão de desligamento
 ```
 
 ### 1.2. Mudando o nome do Prompt no terminal
@@ -56,7 +57,6 @@ sudo gedit ~/.bashrc
 
 # Na 60a linha trocar a parte escrito "\u@\h" pelo nome que queremos dar ao terminal
 ```
-
 
 
 ### 1.3. Atualizações e instalações

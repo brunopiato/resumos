@@ -17,6 +17,8 @@ sudo apt update && sudo apt upgrade
 # Instalações básicas
 #-----------------------------------------------------------------------------------------
 ## Instalando utilitários do Ubuntu
+sudo apt install tree
+sudo apt install neofetch
 sudo apt install curl
 sudo apt install snapd
 sudo snap install snap-store
@@ -82,7 +84,6 @@ eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
 pyenv install 3.11.2
 pyenv virtualenv 3.11.2 ambiente
-pyenv activate ambiente
 
 ## Instalando o gerenciador de pacotes do Python
 sudo apt install python3-pip

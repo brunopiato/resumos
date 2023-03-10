@@ -85,10 +85,8 @@ python3 -m pip install ipykernel
 python3 -m ipykernel install --user
 
 ## Instalando as extensões do Jupyter Notebook
-#sudo -E pip install jupyter_contrib_nbextensions
-#jupyter contrib nbextension install --user
-#jupyter nbextensions_configurator enable --user  # can be skipped for notebook >=5.3
-
+sudo pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install 
+jupyter nbextensions_configurator enable --user
 
 #-----------------------------------------------------------------------------------------
 # Instalando o R 

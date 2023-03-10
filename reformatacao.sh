@@ -25,7 +25,7 @@ sudo apt install gnome-shell-extensions
 sudo apt install chrome-gnome-shell
 
 # Instalando o VSCode
-sudo snap install code
+sudo apt install code
 
 # Instalando aplicativos do Snap
 sudo snap install drawio #Drawio

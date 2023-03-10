@@ -96,3 +96,7 @@ sudo rm ./rstudio-2022.12.0-353-amd64.deb
 #-----------------------------------------------------------------------------------------
 # Instalando Julia
 sudo apt install julia
+
+
+# Tirando o tempo de espera do botão desligar
+gsettings set org.gnome.SessionManager logout-prompt false

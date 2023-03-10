@@ -61,7 +61,7 @@ sudo apt install git
 
 #-----------------------------------------------------------------------------------------
 # Instalando o pyenv e o Python
-# Instalando Python 3.11 
+## Instalando Python 3.11 
 sudo apt install python3.11
 
 ## Instalando o pyenv
@@ -85,7 +85,7 @@ python3 -m pip install ipykernel
 python3 -m ipykernel install --user
 
 ## Instalando as extensões do Jupyter Notebook
-sudo pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install 
+sudo pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 
 #-----------------------------------------------------------------------------------------

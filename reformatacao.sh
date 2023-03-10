@@ -79,10 +79,16 @@ eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 sudo apt install python3-pip
 pip install cython
 
-# Instalando Jupyter Notebook
+## Instalando Jupyter Notebook
 pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 python3 -m pip install ipykernel
 python3 -m ipykernel install --user
+
+## Instalando as extensões do Jupyter Notebook
+#sudo -E pip install jupyter_contrib_nbextensions
+#jupyter contrib nbextension install --user
+#jupyter nbextensions_configurator enable --user  # can be skipped for notebook >=5.3
+
 
 #-----------------------------------------------------------------------------------------
 # Instalando o R 

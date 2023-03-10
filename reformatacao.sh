@@ -81,7 +81,8 @@ pip install cython
 
 # Instalando Jupyter Notebook
 pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user
 
 #-----------------------------------------------------------------------------------------
 # Instalando o R 

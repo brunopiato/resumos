@@ -71,6 +71,12 @@ mv ~/DiretorioOrigem/arquivoMovido.file ~/DiretorioDestino #O comando mv é usad
 touch afile.txt #Cria um arquivo vazio
 
 gsettings set org.gnome.SessionManager logout-prompt false #Retira o tempo de espera do botão de desligamento
+
+apt list --installed #Para ver todos os apps instalados
+
+apt list -a jupyter-notebook #Para ver um app instalado
+
+whereis firefox #Mostra onde está instalado um app
 ```
 
 ### 2.2. Mudando o nome do Prompt no terminal
@@ -137,7 +143,7 @@ nordvpn set autoconnect on #Ajustar o NordVPN para que ele inicie junto com a m�
 
 sudo apt install os-prober #Para instalar o verificador de OSs
 sudo os-prober #Aqui conseguimos o caminho exato do inicializar do Windows para fazer o dual boot
-sudo mount /dev/sdb1 /mnt #Sendo o primeiro caminho o do inicializar do Windows conseguido no comando de cima
+sudo mount /dev/nvme0n1p1 /mnt #Sendo o primeiro caminho o do inicializar do Windows conseguido no comando de cima
 
 cd /mnt/EFI #Mudamos o direitório pra dentro do inicializador do Windows
 sudo cp -ax Microsoft /boot/efi/EFI #Copiamos seu conteúdo para o inicializador do Pop!

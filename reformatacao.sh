@@ -135,6 +135,18 @@ echo "alias upd='sudo apt upgrade'" >> ~/.bash_aliases
 
 
 
+#-----------------------------------------------------------------------------------------
+# Arrumando o menu de boot no Pop!OS
+#-----------------------------------------------------------------------------------------
+sudo mount /dev/nvme0n1p1 /mnt 
+cd /mnt/EFI
+
+sudo cp -ax Microsoft /boot/efi/EFI
+
+sudo echo "timeout 5
+console-mode max" >> /boot/efi/loader/loader.conf
+
+
 
 #-----------------------------------------------------------------------------------------
 # Mensagem final

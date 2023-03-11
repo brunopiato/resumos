@@ -62,6 +62,10 @@ sudo apt-get install -y calibre
 sudo touch /etc/profile.d/calibre.sh
 sudo echo "export CALIBRE_USE_DARK_PALETTE=1" >> /etc/profile.d/calibre.sh
 
+## Instalando o NordVPN
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+sudo usermod -aG nordvpn $USER
+
 #-----------------------------------------------------------------------------------------
 # Instalando Git
 #-----------------------------------------------------------------------------------------
@@ -121,6 +125,18 @@ sudo rm ./rstudio-2022.12.0-353-amd64.deb
 sudo apt install julia
 
 #-----------------------------------------------------------------------------------------
-# Tirando o tempo de espera do botão desligar
+# Demais ajustes e configurações do sistema
 #-----------------------------------------------------------------------------------------
+## Tirando o tempo de espera do botão desligar
 gsettings set org.gnome.SessionManager logout-prompt false
+
+## Criando um arquivo com aliases para comandos resumidos
+echo "alias upd='sudo apt upgrade'" >> ~/.bash_aliases
+
+
+
+
+#-----------------------------------------------------------------------------------------
+# Mensagem final
+#-----------------------------------------------------------------------------------------
+echo REINICIE O COMPUTADOR.

@@ -13,6 +13,7 @@
     - [2.5. Desinstalando coisas](#25-desinstalando-coisas)
     - [2.6. Instalando um colorizador de folders](#26-instalando-um-colorizador-de-folders)
     - [2.7. Instalando e configurando o NordVPN](#27-instalando-e-configurando-o-nordvpn)
+    - [2.8. Para o Pop!OS, que vem sem GRUB, precisamos ativar o *dual boot* (caso necessário) da seguinte maneira:](#28-para-o-popos-que-vem-sem-grub-precisamos-ativar-o-dual-boot-caso-necessário-da-seguinte-maneira)
   - [3. Python e DS](#3-python-e-ds)
     - [3.1. Instalando o gerenciador de versões do Python](#31-instalando-o-gerenciador-de-versões-do-python)
     - [3.2. Instalando o gerenciador de pacotes do Python](#32-instalando-o-gerenciador-de-pacotes-do-python)
@@ -23,9 +24,13 @@
   - [5. Calibre](#5-calibre)
     - [5.1. Dark mode](#51-dark-mode)
   - [6. Extensões](#6-extensões)
-    - [6.1. Unite](#61-unite)
-    - [6.2. Aylur's Widgets](#62-aylurs-widgets)
-    - [6.3. OpenWeather](#63-openweather)
+    - [6.1. Extensões:](#61-extensões)
+    - [6.2. Para instalar:](#62-para-instalar)
+      - [6.2.1. Unite](#621-unite)
+      - [6.2.2. Aylur's Widgets](#622-aylurs-widgets)
+      - [6.2.3. OpenWeather](#623-openweather)
+      - [6.2.4. Show Desktop Button](#624-show-desktop-button)
+      - [6.2.5. Just Perfection](#625-just-perfection)
 
 <!-- /TOC -->
 
@@ -76,7 +81,6 @@ sudo gedit ~/.bashrc
 # pelo nome que queremos dar ao terminal
 ```
 
-
 ### 2.3. Atualizações e instalações
 ```bash
 # Para atualizar o sistema
@@ -101,7 +105,6 @@ rm /usr/bin/jlab # remove command symlink
 rm -rf ~/.config/jupyterlab-desktop 
 ```
 
-
 ### 2.6. Instalando um colorizador de folders
 
 ```bash
@@ -125,8 +128,28 @@ nordvpn login #Fazer o login com o browser
 nordvpn set autoconnect on #Ajustar o NordVPN para que ele inicie junto com a máquina
 ```
 
----
+### 2.8. Para o Pop!OS, que vem sem GRUB, precisamos ativar o *dual boot* (caso necessário) da seguinte maneira:
+```bash
+# Primeiro precisamos montar o inicializador do Windows no Pop!
+# Estes links fornece instruções de como fazer isso
+# https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md
+# https://www.youtube.com/watch?v=ySFV5igQv44&ab_channel=SandipShakya
 
+sudo apt install os-prober #Para instalar o verificador de OSs
+sudo os-prober #Aqui conseguimos o caminho exato do inicializar do Windows para fazer o dual boot
+sudo mount /dev/sdb1 /mnt #Sendo o primeiro caminho o do inicializar do Windows conseguido no comando de cima
+
+cd /mnt/EFI #Mudamos o direitório pra dentro do inicializador do Windows
+sudo cp -ax Microsoft /boot/efi/EFI #Copiamos seu conteúdo para o inicializador do Pop!
+
+sudo echo "timeout 5
+console-mode max" >> /boot/efi/loader/loader.conf #Aqui adicionamos estes dois comandos ao arquivo loader.config
+```
+Agora é só fazer o reboot e testar se deu certo.
+
+<br>
+
+---
 
 ## 3. Python e DS
 
@@ -175,6 +198,8 @@ sudo apt update
 sudo apt install git
 ```
 
+<br>
+
 ---
 
 ## 4. R e RStudio
@@ -206,6 +231,7 @@ R --version
 sudo R
 ```
 
+<br>
 
 ---
 
@@ -224,24 +250,35 @@ export CALIBRE_USE_DARK_PALETTE=1
 sudo service gdm restart
 ```
 
+<br>
+
 --- 
 
 ## 6. Extensões
-Extensões:
+
+### 6.1. Extensões:
 <https://extensions.gnome.org/>
 
-Para instalar:
+### 6.2. Para instalar:
 <https://linuxhint.com/installing_gnome_extensions_ubuntu/>
 
-### 6.1. Unite
+#### 6.2.1. Unite
 A extensão Unite permite arrumar visualmente o ambiente Ubuntu, ajustando a aparência da interface.
 Link para a extensão Unite:
 <https://extensions.gnome.org/extension/1287/unite/>
 
-### 6.2. Aylur's Widgets
+#### 6.2.2. Aylur's Widgets
 Esta extensão adiciona uma série de wigdets à área de trabalho e à barra de tarefas.
 <https://extensions.gnome.org/extension/5338/aylurs-widgets/>
 
-### 6.3. OpenWeather
+#### 6.2.3. OpenWeather
 Extensão de previsão meteorológica
 <https://extensions.gnome.org/extension/750/openweather/>
+
+#### 6.2.4. Show Desktop Button
+Adicionar botão de visualizar o desktop
+https://extensions.gnome.org/extension/1194/show-desktop-button/
+
+#### 6.2.5. Just Perfection
+Adiciona diversos controles de ajustes da interface
+https://extensions.gnome.org/extension/3843/just-perfection/

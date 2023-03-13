@@ -32,6 +32,7 @@ sudo apt install curl
 sudo apt install snapd
 sudo snap install snap-store
 sudo apt install gparted -y
+sudo apt install os-prober
 
 ## Instalando o Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

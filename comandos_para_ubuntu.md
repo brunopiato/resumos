@@ -156,6 +156,16 @@ console-mode max" >> /boot/efi/loader/loader.conf #Aqui adicionamos estes dois c
 ```
 Agora é só fazer o reboot e testar se deu certo.
 
+**Como esta opção nem sempre funciona, segue uma segunda possibilidade**
+```bash
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt install grub-customizer os-prober -y
+```
+
+
+
+
+
 <br>
 
 ---

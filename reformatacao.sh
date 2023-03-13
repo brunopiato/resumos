@@ -13,6 +13,11 @@ COMMENT
 #-----------------------------------------------------------------------------------------
 sudo apt update && sudo apt upgrade
 
+
+
+
+
+
 #-----------------------------------------------------------------------------------------
 # Instalações básicas
 #-----------------------------------------------------------------------------------------
@@ -34,7 +39,7 @@ sudo apt install gnome-shell-extensions
 sudo apt install chrome-gnome-shell
 
 ## Instalando o VSCode
-sudo snap install --classic code
+sudo snap install code --classic 
 
 ## Instalando aplicativos do Snap
 sudo snap install drawio #Drawio
@@ -66,11 +71,21 @@ sudo echo "export CALIBRE_USE_DARK_PALETTE=1" >> /etc/profile.d/calibre.sh
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 sudo usermod -aG nordvpn $USER
 
+
+
+
+
+
 #-----------------------------------------------------------------------------------------
 # Instalando Git
 #-----------------------------------------------------------------------------------------
 sudo apt update
 sudo apt install git
+
+
+
+
+
 
 #-----------------------------------------------------------------------------------------
 # Instalando o pyenv e o Python
@@ -101,6 +116,11 @@ python3 -m ipykernel install --user
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 
+
+
+
+
+
 #-----------------------------------------------------------------------------------------
 # Instalando o R 
 #-----------------------------------------------------------------------------------------
@@ -118,11 +138,19 @@ wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-am
 sudo apt install -f ./rstudio-2022.12.0-353-amd64.deb
 sudo rm ./rstudio-2022.12.0-353-amd64.deb
 
+
+
+
+
 #-----------------------------------------------------------------------------------------
 # Instalando Julia
 #-----------------------------------------------------------------------------------------
 
 sudo apt install julia
+
+
+
+
 
 #-----------------------------------------------------------------------------------------
 # Demais ajustes e configurações do sistema
@@ -132,6 +160,9 @@ gsettings set org.gnome.SessionManager logout-prompt false
 
 ## Criando um arquivo com aliases para comandos resumidos
 echo "alias upd='sudo apt upgrade'" >> ~/.bash_aliases
+
+
+
 
 
 
@@ -148,7 +179,15 @@ console-mode max" >> /boot/efi/loader/loader.conf
 
 
 
+
+
+
 #-----------------------------------------------------------------------------------------
 # Mensagem final
 #-----------------------------------------------------------------------------------------
-echo REINICIE O COMPUTADOR.
+echo "A instalação terminou, mas precisamos reiniciar o computador. Reiniciar agora? Responda (S/N): "
+read resposta
+if [ $resposta == "S" -o $resposta == "s" ] ; then
+reboot
+echo "Reiniciar o computador assim que possível"
+fi

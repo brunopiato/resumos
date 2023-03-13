@@ -31,6 +31,9 @@
       - [6.2.3. OpenWeather](#623-openweather)
       - [6.2.4. Show Desktop Button](#624-show-desktop-button)
       - [6.2.5. Just Perfection](#625-just-perfection)
+      - [6.2.6. ArcMenu](#626-arcmenu)
+      - [6.2.7. Time ++](#627-time-)
+  - [7. Instalando e configurando a VPN USPNet](#7-instalando-e-configurando-a-vpn-uspnet)
 
 <!-- /TOC -->
 
@@ -288,3 +291,25 @@ https://extensions.gnome.org/extension/1194/show-desktop-button/
 #### 6.2.5. Just Perfection
 Adiciona diversos controles de ajustes da interface
 https://extensions.gnome.org/extension/3843/just-perfection/
+
+#### 6.2.6. ArcMenu
+Adiciona um menu tipo Menu Iniciar do Windows e tem muitos icones legais
+https://extensions.gnome.org/extension/3628/arcmenu/
+
+#### 6.2.7. Time ++
+Adiciona um timer com cronômetro e pomodoros
+https://extensions.gnome.org/extension/1238/time/
+
+
+---
+
+## 7. Instalando e configurando a VPN USPNet
+```bash
+sudo apt-get install network-manager-openconnect
+sudo apt-get install network-manager-openconnect-gnome 
+```
+- Selecione a opção VPN Compatível com Cisco Any Connect (openconnect)
+- Nome da conexão: VPN USPNet
+- Gateway: vpn.semfio.usp.br
+- login (Numero USP - Renata): 11555410
+- senha no WhatsApp

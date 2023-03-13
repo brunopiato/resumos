@@ -8,6 +8,10 @@ pos-instalacao e formatacao
 do OS com Ubuntu.
 COMMENT
 
+
+
+
+
 #-----------------------------------------------------------------------------------------
 # Atualizando o sistema
 #-----------------------------------------------------------------------------------------
@@ -27,6 +31,7 @@ sudo apt install neofetch
 sudo apt install curl
 sudo apt install snapd
 sudo snap install snap-store
+sudo apt install gparted -y
 
 ## Instalando o Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -101,22 +106,24 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
-pyenv install 3.11.2
-pyenv virtualenv 3.11.2 ambiente
-
 ## Instalando o gerenciador de pacotes do Python
+sudo apt install python3
 sudo apt install python3-pip
+sudo pip3 install --upgrade pip
 pip install cython
 
+
 ## Instalando kernel iPython
-python3 -m pip install ipykernel
-python3 -m ipykernel install --user
+#python3 -m pip install ipykernel
+#python3 -m ipykernel install --user
 
 ## Instalando o Jupyter Notebook e suas extensões
-pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
+#pip install jupyter_contrib_nbextensions
+#jupyter contrib nbextension install --user
 
-
+## Instalando o JupyterLab Desktop
+wget https://github.com/jupyterlab/jupyterlab-desktop/releases/latest/download/JupyterLab-Setup-Debian.deb
+sudo apt install ./JupyterLab-Setup-Debian.deb
 
 
 
@@ -165,7 +172,6 @@ echo "alias upd='sudo apt upgrade'" >> ~/.bash_aliases
 
 
 
-
 #-----------------------------------------------------------------------------------------
 # Arrumando o menu de boot no Pop!OS
 #-----------------------------------------------------------------------------------------
@@ -185,6 +191,9 @@ console-mode max" >> /boot/efi/loader/loader.conf
 #-----------------------------------------------------------------------------------------
 # Mensagem final
 #-----------------------------------------------------------------------------------------
+
+neofetch
+
 echo "A instalação terminou, mas precisamos reiniciar o computador. Reiniciar agora? Responda (S/N): "
 read resposta
 if [ $resposta == "S" -o $resposta == "s" ] ; then

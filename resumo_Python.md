@@ -1,10 +1,37 @@
+
 # Resumo de Python
-Bruno Piato - 02 de março de 2023
+
+## 1. Sumário
+
+<!-- TOC -->
+
+- [Resumo de Python](#resumo-de-python)
+  - [1. Sumário](#1-sumário)
+  - [2. Comandos em geral](#2-comandos-em-geral)
+  - [3. Funções nativas](#3-funções-nativas)
+    - [3.1. Expressões *lambda*](#31-expressões-lambda)
+    - [3.2. Função *map()*](#32-função-map)
+  - [4. Bibliotecas estrangeiras](#4-bibliotecas-estrangeiras)
+    - [4.1. Biblioteca: Pandas](#41-biblioteca-pandas)
+      - [4.1.1. Método *apply()*](#411-método-apply)
+      - [4.1.2. Método *agg()*](#412-método-agg)
+      - [4.1.3. Método *groupby()*](#413-método-groupby)
+    - [4.2. Biblioteca: MatPlotLib](#42-biblioteca-matplotlib)
+    - [4.3. Biblioteca: Seaborn](#43-biblioteca-seaborn)
+    - [4.4. Biblioteca: plotly](#44-biblioteca-plotly)
+    - [4.5. Biblioteca: Streamlit](#45-biblioteca-streamlit)
+
+<!-- /TOC -->
+
+## 2. Comandos em geral
+
+Alguns pacotes importantes a serem instalados para o funcionamento adequado 
 
 
-## 1. Funções e estruturas nativas
 
-### 1.1. Expressões *lambda*
+## 3. Funções nativas
+
+### 3.1. Expressões *lambda*
 As expressões lambda (funções anônimas) são usadas para que possamos nos beneficiar da estrutura de funções sem ter que definir e, posteriormente, chamar uma função. Normalmente são usadas como input de outras funções. A estrutura de uma função lambda é:
 
 ```python
@@ -30,7 +57,7 @@ df1['competition_open_since_month'] = (df1.apply( lambda x: x['date'].month
 
 
 
-### 1.2. Função *map()*
+### 3.2. Função *map()*
 
 A função *map()* aplica uma determinada função sobre um objeto iterável, como listas, tuplas e conjuntos, por exemplo. Ela recebe, portanto, dois argumentos, a função a ser aplicada e o iterável. A ideia central desta função é poder substituir os laços *for* em que aplicaríamos uma função aos elementos de um objeto iterável e obteríamos como resultado um objeto iterável modificado. 
 
@@ -44,10 +71,14 @@ map(lambda x: 3*x+1, lista)
 
 <br>
 
-## 2. Biblioteca: Pandas
+
+
+## 4. Bibliotecas estrangeiras
+
+### 4.1. Biblioteca: Pandas
 O Pandas é uma biblioteca utilizada principalmente para carregar, transformar e manipular dados em forma de tabelas (dataframes). Alguns dos métodos dos objetos de classe DataFrame foram descritos anteriormente e serão retomados aqui.
 
-### 2.1. Método *apply()*
+#### 4.1.1. Método *apply()*
 O método *apply()* funciona de forma semelhante à função *map()*, sendo um método dos objetos de classe DataFrame pertencentes à biblioteca Pandas que itera uma função especificada sobre as linhas ou colunas de um dataframe. Desta forma devemos explicitar qual função iremos iterar sobre o dataframe e a orientação da iteração (horizontal, ou seja, nas linhas, ou verrtical, nas colunas) com o argumento *axis=* (0 para colunas e 1 para linhas).
 
 ```python
@@ -56,7 +87,7 @@ dataframe.apply(mean, axis=0)
 ```
 
 
-### 2.2. Método *agg()*
+#### 4.1.2. Método *agg()*
 
 O método *agg()* vem da palavra aggregate e ele permite que façamos o mesmo que o método apply, mas utilizando múltiplas funções ao mesmo tempo, devolvendo um dataframe com os resultados da aplicação de cada função.
 
@@ -69,7 +100,7 @@ import pandas as pd
 ```
 
 
-### 2.3. Método *groupby()*
+#### 4.1.3. Método *groupby()*
 O método *groupby()* pertecten ao Pandas permite que agrupemos um dataframe de acordo com as categorias de uma variável ou condição e aplicar uma operação de agrupamento (contagem, soma, média, etc). 
 ```python
 import pandas as pd
@@ -87,7 +118,7 @@ df1[['var1', 'var2', 'var3']].groupby(['var1', 'var2']).agg(['oper1', 'oper2']) 
 
 <br>
 
-## 3. Biblioteca: MatPlotLib
+### 4.2. Biblioteca: MatPlotLib
 É uma biblioteca dedicada à plotagem de gráficos.
 
 ```python
@@ -97,7 +128,7 @@ from matplotlib import <módulo>
 
 <br>
 
-## 4. Biblioteca: Seaborn
+### 4.3. Biblioteca: Seaborn
 É uma biblioteca dedicada à plotagem de gráficos.
 
 ```python
@@ -107,7 +138,7 @@ import seaborn as sns
 
 <br>
 
-## 5. Biblioteca: plotly
+### 4.4. Biblioteca: plotly
 É uma biblioteca dedicada à plotagem de gráficos.
 
 ```python
@@ -117,7 +148,7 @@ import plotly.express as px
 
 <br>
 
-## 6. Biblioteca: Streamlit 
+### 4.5. Biblioteca: Streamlit 
 O pacote Streamlit é um pacote para a criação de aplicações web de análise e visualização de dados. É ótima para o desenvolvimento de dashboars e painéis de dados, tendo diversos widgets, botões, afinidade com pacotes de plotagem gráfica (i.e. plotly) e outras funcionalidades.
 
 

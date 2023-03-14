@@ -8,6 +8,8 @@
 - [Resumo de Python](#resumo-de-python)
   - [1. Sumário](#1-sumário)
   - [2. Comandos em geral](#2-comandos-em-geral)
+    - [Para instalar o gerenciador de ambiente virtuais pyenv](#para-instalar-o-gerenciador-de-ambiente-virtuais-pyenv)
+    - [Trabalhando com ambientes virtuais](#trabalhando-com-ambientes-virtuais)
   - [3. Funções nativas](#3-funções-nativas)
     - [3.1. Expressões *lambda*](#31-expressões-lambda)
     - [3.2. Função *map()*](#32-função-map)
@@ -26,6 +28,77 @@
 ## 2. Comandos em geral
 
 Alguns pacotes importantes a serem instalados para o funcionamento adequado 
+
+```bash
+python3.11 -m pip install --upgrade pip #Para fazer o upgrade do pip
+
+python -m pip freeze #Para visualizar os pacotes que estão instalados em um 
+#                     determiando ambiente virtual
+```
+
+
+
+### Para instalar o gerenciador de ambiente virtuais pyenv
+
+```bash
+#Primeiro as dependências
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python2-dev python3-dev aria2
+
+#Então o prórpio pyenv
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+
+#Por fim editar o ~/.bashrc para que possamos usar o pyenv de dentro do bash 
+echo 'export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"
+
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+```
+
+
+### Trabalhando com ambientes virtuais
+
+Sempre que formos trabalhar em um projeto devemos criar um ambiente virtual dedicado ao projeto e instalar nele tudo que usaremos no trabalho, como:
+- Compilador Python
+- Jupyter Notebook
+- IPyKernel
+- Pacotes a serem utilizados
+
+Então para começar um novo projeto com o gerenciador de ambiente pyenv já instalado:
+```bash
+pyenv intall 3.11 #Em que 3.11 é a versão do Python a ser instalada
+
+pyenv virtualenv 3.11 env_proj #Em que 3.11 é a versão do Python instalada
+#                          a ser usada no ambiente chamado "env_proj"
+
+pyenv activate env_proj #Para ativar o ambiente "env_proj"
+```
+
+Uma vez criado e ativado o ambiente virtual, podemos instalar as ferramentas que usaremos no projeto dentro dele:
+
+```python
+#Primeiro instalar o Jupyter Notebook
+pip3 install notebook
+
+#Depois instalar o ipykernel para usar o notebook de dentro do vscode
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user
+
+#Por fim instalar e ativar as extenções do notebook
+pip3 install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+
+```
+
+Agora estamos prontos para instalar os pacotes a serem utilizados no projeto
+
+```python
+pip3 install pandas
+pip3 install -U scikit-learn #O parâmetro -U serve para 
+#                             fazer o upgrade de todas as versões
+pip3 install streamlit
+```
 
 
 

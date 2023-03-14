@@ -1,0 +1,38 @@
+#### 6.2.1. Unite
+A extensão Unite permite arrumar visualmente o ambiente Ubuntu, ajustando a aparência da interface.
+Link para a extensão Unite:
+<https://extensions.gnome.org/extension/1287/unite/>
+
+#### 6.2.2. Aylur's Widgets
+Esta extensão adiciona uma série de wigdets à área de trabalho e à barra de tarefas.
+<https://extensions.gnome.org/extension/5338/aylurs-widgets/>
+
+#### 6.2.3. OpenWeather
+Extensão de previsão meteorológica
+<https://extensions.gnome.org/extension/750/openweather/>
+
+#### 6.2.4. Show Desktop Button
+Adicionar botão de visualizar o desktop
+https://extensions.gnome.org/extension/1194/show-desktop-button/
+
+#### 6.2.5. Just Perfection
+Adiciona diversos controles de ajustes da interface
+https://extensions.gnome.org/extension/3843/just-perfection/
+
+#### 6.2.6. ArcMenu
+Adiciona um menu tipo Menu Iniciar do Windows e tem muitos icones legais
+https://extensions.gnome.org/extension/3628/arcmenu/
+
+#### 6.2.7. Time ++
+Adiciona um timer com cronômetro e pomodoros
+https://extensions.gnome.org/extension/1238/time/
+
+
+#### 6.2.8. Switch workspace
+Facilita a mudança entre workspaces
+https://extensions.gnome.org/extension/1231/switch-workspace/
+
+
+#### 6.2.9. Maximize to workspace with history
+Quando janelas são maximizadas, elas pulam de workspace
+https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/

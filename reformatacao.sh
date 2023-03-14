@@ -258,6 +258,9 @@ https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/"
 
 neofetch
 
+echo "A LISTA COM AS EXTENSÕES DO GNOME-SHELL RECOMENDADAS PARA SEREM INSTALADAS ESTÃO SALVAS EM ~/lista_ext.txt
+VÁ ATÉ LÁ VERIFICÁ-LAS"
+
 echo "A instalação terminou, mas precisamos reiniciar o computador. Reiniciar agora? Responda (S/N): "
 read resposta
 if [ $resposta == "S" -o $resposta == "s" ] ; then

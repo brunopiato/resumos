@@ -33,6 +33,8 @@
       - [6.2.5. Just Perfection](#625-just-perfection)
       - [6.2.6. ArcMenu](#626-arcmenu)
       - [6.2.7. Time ++](#627-time-)
+      - [6.2.8. Switch workspace](#628-switch-workspace)
+      - [6.2.9. Maximize to workspace with history](#629-maximize-to-workspace-with-history)
   - [7. Instalando e configurando a VPN USPNet](#7-instalando-e-configurando-a-vpn-uspnet)
 
 <!-- /TOC -->
@@ -309,6 +311,16 @@ https://extensions.gnome.org/extension/3628/arcmenu/
 #### 6.2.7. Time ++
 Adiciona um timer com cronômetro e pomodoros
 https://extensions.gnome.org/extension/1238/time/
+
+
+#### 6.2.8. Switch workspace
+Facilita a mudança entre workspaces
+https://extensions.gnome.org/extension/1231/switch-workspace/
+
+
+#### 6.2.9. Maximize to workspace with history
+Quando janelas são maximizadas, elas pulam de workspace
+https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
 
 
 ---
